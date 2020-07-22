@@ -3,7 +3,13 @@ import { useNavigation } from '@react-navigation/native';
 import { useRoute } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
 
-import { Container, Header, BackButton, HeaderTitle } from './styles';
+import {
+  Container,
+  Header,
+  BackButton,
+  HeaderTitle,
+  ResumoRestauranteContent,
+} from './styles';
 
 interface RouteParams {
   restauranteId: String;
@@ -24,6 +30,8 @@ const RestaurantDetails: React.FC = () => {
         </BackButton>
         <HeaderTitle>teste</HeaderTitle>
       </Header>
+
+      <ResumoRestauranteContent></ResumoRestauranteContent>
     </Container>
   );
 };

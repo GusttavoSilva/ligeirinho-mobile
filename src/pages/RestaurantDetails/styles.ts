@@ -12,7 +12,7 @@ export const Header = styled.View`
   background: #fff;
 
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `;
 
@@ -25,4 +25,13 @@ export const HeaderTitle = styled.Text`
   color: #333;
   font-size: 20px;
   font-family: 'RobotoSlab-Medium';
+`;
+
+export const ResumoRestauranteContent = styled.View`
+  padding: 20px;
+  background: #f33f;
+
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
