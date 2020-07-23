@@ -7,6 +7,8 @@ import Profile from '../pages/Profile';
 import Search from '../pages/Search';
 import RestaurantDetails from '../pages/RestaurantDetails';
 
+import Icon from 'react-native-vector-icons/Feather';
+
 const App = createStackNavigator();
 const Tab = createBottomTabNavigator();
 

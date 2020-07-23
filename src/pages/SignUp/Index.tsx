@@ -71,6 +71,8 @@ const SignUp: React.FC = () => {
         console.log(data);
         await api.post('/users', data);
         navigation.navigate('SignIn');
+
+        // console.log(sobrenomeInputRef.current?.props.value)
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);

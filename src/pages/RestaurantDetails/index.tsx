@@ -9,6 +9,11 @@ import {
   BackButton,
   HeaderTitle,
   ResumoRestauranteContent,
+  NomeRestaurante,
+  NomeRestauranteText,
+  InfoAdicional,
+  TipoCardapioText,
+  DistanciaText,
 } from './styles';
 
 interface RouteParams {
@@ -31,7 +36,17 @@ const RestaurantDetails: React.FC = () => {
         <HeaderTitle>teste</HeaderTitle>
       </Header>
 
-      <ResumoRestauranteContent></ResumoRestauranteContent>
+      <ResumoRestauranteContent>
+        <NomeRestaurante onPress={() => {}}>
+          <NomeRestauranteText>Restaurante Churrascaria</NomeRestauranteText>
+          <Icon name="chevron-right" size={24} color="#f40000" />
+        </NomeRestaurante>
+
+        <InfoAdicional>
+          <TipoCardapioText>Lanches *</TipoCardapioText>
+          <DistanciaText> 0,8KM</DistanciaText>
+        </InfoAdicional>
+      </ResumoRestauranteContent>
     </Container>
   );
 };
