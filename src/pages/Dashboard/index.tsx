@@ -23,11 +23,11 @@ const Dashboard: React.FC = () => {
       <HeaderRight />
       <HeaderLeft />
       <Address />
+      <Categories />
       <Coupon />
       <Suggestions />
-      <Promotions />
+      {/* <Promotions /> */}
       <Offers />
-      <Categories />
       <Restaurants />
     </Container>
   );

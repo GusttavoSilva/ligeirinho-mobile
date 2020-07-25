@@ -1,13 +1,30 @@
 import styled from 'styled-components/native';
-
 import { StyleSheet } from 'react-native';
+import { red } from '../../utils/colors';
+import { FlatList } from 'react-native';
+import { PurchasesData } from './index';
 
-import { red } from '../../utils/colors'; 
+export const PurchasesList = styled(
+  FlatList as new () => FlatList<PurchasesData>,
+)`
+  flex: 1;
+  margin-top: 10px;
+`;
 
-export const Container = styled.View``;
+export const Container = styled.View`
+  flex: 1;
+`;
 
 export const Item = styled.View`
-  margin-top: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-right: 30px;
+  margin-left: 30px;
 `;
 
 export const Date = styled.Text`
@@ -17,8 +34,8 @@ export const Date = styled.Text`
 `;
 
 export const Wrapper = styled.View`
-  background: #FFF;
-  margin-top: 20px;
+  background: #fff;
+  margin-top: 10px;
   padding: 10px;
   border-radius: 4px;
   box-shadow: 10px 2px 10px rgba(0, 0, 0, 0.1);
@@ -42,16 +59,13 @@ export const RestaurantImage = styled.Image`
 `;
 
 export const Info = styled.View`
-  margin-left: 15px;
+  /* margin-left: 15px; */
 `;
 
-export const Name = styled.Text.attrs({
-  numberOfLines: 1,
-})`
+export const Name = styled.Text`
   color: #333;
   font-weight: bold;
   font-size: 16px;
-  
 `;
 
 export const OrderDetails = styled.View`
@@ -77,7 +91,7 @@ export const Evaluation = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 ;
+  padding: 10px 0;
 
   border-bottom-width: ${StyleSheet.hairlineWidth}px;
   border-color: #cecece;

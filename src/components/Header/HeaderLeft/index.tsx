@@ -8,7 +8,8 @@ const HeaderLeft: React.FC = () => {
   const { navigate } = useNavigation();
   return (
     <Container>
-      <Button onPress={() => navigate('Dashboard')}>
+      {/* <Button onPress={() => navigate('Dashboard')}> */}
+      <Button onPress={() => {}}>
         <Title>Entrega</Title>
       </Button>
       <Button onPress={() => {}}>

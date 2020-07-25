@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/Entypo';
 
 import {
   Container,
+  PurchasesList,
   Item,
   Date,
   Wrapper,
@@ -24,7 +25,7 @@ import {
 
 import api from '../../services/api';
 
-interface PurchasesData {
+export interface PurchasesData {
   id: String;
   date: String;
   restaurant_url: String;
@@ -51,40 +52,62 @@ const Purchases: React.FC = () => {
 
   return (
     <Container>
-      <Item key={purchases.id}>
-        <Date>{purchases.date}</Date>
+      <PurchasesList
+        horizontal={false}
+        showsHorizontalScrollIndicator={false}
+        // data={purchases}
+        data={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
+        keyExtractor={(purchases) => String(purchases.id)}
+        renderItem={({ item: purchases }) => (
+          <Item>
+            <Date>
+              {/* {purchases.date} */}
+              {'29/03/2020'}
+            </Date>
 
-        <Wrapper>
-          <Restaurant>
-            <RestaurantImage source={{ uri: purchases.restaurant_url }} />
-            <Info>
-              <Name>{purchases.restaurant_name}</Name>
-              <OrderNumber>Pedido entregue{purchases.order_number}</OrderNumber>
-            </Info>
-          </Restaurant>
-          <OrderDetails>
-            <Order>{purchases.order}</Order>
-          </OrderDetails>
-          <Evaluation>
-            <Message>Avaliação do pedido</Message>
-            <Star>
-              <Icon name="star" color="#ffcc33" size={20} />
-              <Icon name="star" color="#ffcc33" size={20} />
-              <Icon name="star" color="#ffcc33" size={20} />
-              <Icon name="star" color="#ffcc33" size={20} />
-              <Icon name="star" color="#ffcc33" size={20} />
-            </Star>
-          </Evaluation>
-          <Menu>
-            <MenuButton>
-              <MenuText>Ajuda</MenuText>
-            </MenuButton>
-            <MenuButton>
-              <MenuText>Detalhes</MenuText>
-            </MenuButton>
-          </Menu>
-        </Wrapper>
-      </Item>
+            <Wrapper>
+              <Restaurant>
+                {/* <RestaurantImage source={{ uri: purchases.restaurant_url }} /> */}
+
+                <Info>
+                  <Name>
+                    {/* {purchases.restaurant_name} */}
+                    {'bar do toin'}
+                  </Name>
+                  <OrderNumber>
+                    {/* Pedido entregue{purchases.order_number} */}
+                    Pedido entregue{' 760'}
+                  </OrderNumber>
+                </Info>
+              </Restaurant>
+              <OrderDetails>
+                <Order>
+                  {/* {purchases.order} */}
+                  {'760'}
+                </Order>
+              </OrderDetails>
+              <Evaluation>
+                <Message>Avaliação do pedido</Message>
+                <Star>
+                  <Icon name="star" color="#ffcc33" size={20} />
+                  <Icon name="star" color="#ffcc33" size={20} />
+                  <Icon name="star" color="#ffcc33" size={20} />
+                  <Icon name="star" color="#ffcc33" size={20} />
+                  <Icon name="star" color="#ffcc33" size={20} />
+                </Star>
+              </Evaluation>
+              <Menu>
+                <MenuButton>
+                  <MenuText>Ajuda</MenuText>
+                </MenuButton>
+                <MenuButton>
+                  <MenuText>Detalhes</MenuText>
+                </MenuButton>
+              </Menu>
+            </Wrapper>
+          </Item>
+        )}
+      />
     </Container>
   );
 };

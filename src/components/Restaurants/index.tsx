@@ -88,7 +88,8 @@ const Restaurants: React.FC = () => {
         <RestaurantList
           horizontal={false}
           showsHorizontalScrollIndicator={false}
-          data={restaurante}
+          // data={restaurante}
+          data={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
           keyExtractor={(restaurante) => String(restaurante.id)}
           renderItem={({ item: restaurante }) => (
             <Item onPress={() => {}}>

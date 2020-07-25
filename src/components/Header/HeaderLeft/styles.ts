@@ -4,6 +4,7 @@ import { red } from '../../../utils/colors';
 
 interface TitleProps {
   disabled?: boolean;
+  isFocused?: boolean;
 }
 
 export const Container = styled.View`
