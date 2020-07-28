@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-import InputMask from '../../components/MaskInput';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { useNavigation } from '@react-navigation/native';
@@ -107,6 +106,7 @@ const SignUp: React.FC = () => {
               <View>
                 <Title>Cadastro</Title>
               </View>
+
               <Input
                 autoCapitalize="words"
                 name="username"

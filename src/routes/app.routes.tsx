@@ -61,9 +61,7 @@ const AppRoutes: React.FC = () => (
     }}
   >
     <App.Screen name="Inicio" component={Tabs} />
-
     <App.Screen name="Search" component={Search} />
-
     <App.Screen name="Pedidos" component={Requests} />
     <App.Screen name="Perfil" component={Profile} />
 

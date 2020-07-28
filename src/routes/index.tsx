@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, ActivityIndicator } from 'react-native';
 import AuthRoutes from './auth.routes';
 import AppRoutes from './app.routes';
@@ -15,8 +15,8 @@ const Routes: React.FC = () => {
       </View>
     );
   }
-  // return token ? <AppRoutes /> : <AuthRoutes />;
-  return <AppRoutes />;
+  return token ? <AppRoutes /> : <AuthRoutes />;
+  // return <AppRoutes />;
 };
 
 export default Routes;

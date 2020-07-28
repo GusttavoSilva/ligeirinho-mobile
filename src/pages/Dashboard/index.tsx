@@ -26,7 +26,7 @@ const Dashboard: React.FC = () => {
       <Categories />
       <Coupon />
       <Suggestions />
-      {/* <Promotions /> */}
+      <Promotions />
       <Offers />
       <Restaurants />
     </Container>

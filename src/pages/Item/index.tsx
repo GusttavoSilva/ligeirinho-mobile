@@ -41,6 +41,10 @@ const Item: React.FC = () => {
 
   return (
     <Container>
+      <BackButton onPress={() => navigation.goBack()}>
+        <Icon name="keyboard-arrow-left" color="#f00" size={35} />
+      </BackButton>
+
       <Details>
         {/* <ItemImage source={{ uri: item.offer_url }} /> */}
         <ItemImage source={sandubaImg} />

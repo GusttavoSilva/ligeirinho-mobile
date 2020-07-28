@@ -19,6 +19,7 @@ import {
 const Profile: React.FC = () => {
   return (
     <Container>
+      <Person />
       <OptionsList>
         <Option onPress={() => {}}>
           <Icon name="bell" size={35} color="#333" />

@@ -65,7 +65,7 @@ const Search: React.FC = () => {
             <ItemImage source={sandubaImg} />
             <ItemTitle>
               {/* {categories.title} */}
-              {'Jonesa'}
+              {'sanduba'}
             </ItemTitle>
           </Item>
         )}

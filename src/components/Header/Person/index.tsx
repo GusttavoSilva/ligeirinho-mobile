@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Icon from 'react-native-vector-icons/feather';
+import Icon from 'react-native-vector-icons/Feather';
 
 import {
   Container,

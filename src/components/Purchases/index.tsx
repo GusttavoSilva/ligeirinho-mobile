@@ -24,6 +24,7 @@ import {
 } from './styles';
 
 import api from '../../services/api';
+import sandubaImg from '../../assets/sanduba.png';
 
 export interface PurchasesData {
   id: String;
@@ -68,6 +69,7 @@ const Purchases: React.FC = () => {
             <Wrapper>
               <Restaurant>
                 {/* <RestaurantImage source={{ uri: purchases.restaurant_url }} /> */}
+                <RestaurantImage source={sandubaImg} />
 
                 <Info>
                   <Name>
