@@ -19,7 +19,7 @@ const Address: React.FC = () => {
   return (
     <Container>
       <AddressButton>
-        <Location>Jussara-Go, {DataAtual()}</Location>
+        <Location>Jussara-Go, {DataAtual()} </Location>
         <Icon name="chevron-down" size={20} color={red} />
       </AddressButton>
     </Container>

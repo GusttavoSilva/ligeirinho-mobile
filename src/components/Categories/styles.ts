@@ -1,9 +1,10 @@
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
 import { CategoriesData } from './index';
+import Input from '../Input';
 
 export const Container = styled.View`
-  margin: 30px 0px;
+  margin: 10px 0px;
 `;
 
 export const Header = styled.View`
@@ -15,12 +16,16 @@ export const Title = styled.Text`
   font-weight: bold;
 `;
 
+export const InputContainer = styled.View`
+  margin: 15px 15px 0;
+`;
+
 export const CategoriesList = styled(
   FlatList as new () => FlatList<CategoriesData>,
 )`
   margin-top: 10px;
   padding-left: 20px;
-  padding: 32px 24px 16px;
+  padding: 8px 24px 16px;
 `;
 
 export const Item = styled.TouchableOpacity`

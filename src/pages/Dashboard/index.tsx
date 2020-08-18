@@ -16,6 +16,7 @@ import Restaurants from '../../components/Restaurants';
 
 import HeaderLeft from '../../components/Header/HeaderLeft';
 import HeaderRight from '../../components/Header/HeaderRight';
+import Search from '../../components/Search';
 
 const Dashboard: React.FC = () => {
   return (
@@ -23,11 +24,12 @@ const Dashboard: React.FC = () => {
       {/* <HeaderRight /> */}
       {/* <HeaderLeft /> */}
       <Address />
+      <Search />
       <Categories />
-      <Coupon />
-      <Suggestions />
-      <Promotions />
-      <Offers />
+      {/* <Coupon /> */}
+      {/* <Suggestions /> */}
+      {/* <Promotions /> */}
+      {/* <Offers /> */}
       <Restaurants />
     </Container>
   );

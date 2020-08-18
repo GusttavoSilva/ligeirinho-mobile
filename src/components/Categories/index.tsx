@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import logoImg from '../../assets/logo.png';
 import {
   Container,
@@ -11,6 +11,12 @@ import {
 } from './styles';
 
 import api from '../../services/api';
+
+import { FormHandles } from '@unform/core';
+
+interface SearchData {
+  Search: String;
+}
 
 export interface CategoriesData {
   id: string;
