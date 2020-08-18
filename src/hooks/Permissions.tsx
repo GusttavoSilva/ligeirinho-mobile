@@ -5,7 +5,7 @@ import React, {
   useState,
   useEffect,
 } from 'react';
-import { PermissionsAndroid } from 'react-native';
+import { PermissionsAndroid, Platform } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
 
 interface PermissionState {
@@ -15,8 +15,6 @@ interface PermissionState {
 interface PermissionContextData {
   latitude: number;
   longitude: number;
-  coordinatesUser(): void;
-  geolocationPermission(): void;
 }
 
 const PermissionContext = createContext<PermissionContextData>(
@@ -53,17 +51,18 @@ const PermissionProvider: React.FC = ({ children }) => {
         setLatitude(position.coords.latitude);
       });
     }
-  }, [Geolocation]);
+  }, [Geolocation, data.LocationPermission]);
 
   useEffect(() => {
     geolocationPermission();
-    coordinatesUser();
   }, []);
 
+  useEffect(() => {
+    coordinatesUser();
+  }, [data.LocationPermission]);
+
   return (
-    <PermissionContext.Provider
-      value={{ geolocationPermission, coordinatesUser, longitude, latitude }}
-    >
+    <PermissionContext.Provider value={{ longitude, latitude }}>
       {children}
     </PermissionContext.Provider>
   );

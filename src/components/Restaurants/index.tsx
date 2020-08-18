@@ -23,6 +23,7 @@ import {
   Distance,
   Delay,
 } from './styles';
+import { usePermission } from '../../hooks/Permissions';
 
 export interface RestauranteData {
   id: string;
@@ -37,6 +38,7 @@ export interface RestauranteData {
 const Restaurants: React.FC = () => {
   const { navigate } = useNavigation();
   const { signOut } = useAuth();
+  const { latitude, longitude } = usePermission();
 
   const [restaurante, setRestaurante] = useState<RestauranteData[]>([]);
 
@@ -44,8 +46,8 @@ const Restaurants: React.FC = () => {
     try {
       const response = await api.get('/clientes', {
         headers: {
-          latitude: -15.867846,
-          longitude: -50.8542468,
+          latitude,
+          longitude,
         },
       });
       setRestaurante(response.data.data);

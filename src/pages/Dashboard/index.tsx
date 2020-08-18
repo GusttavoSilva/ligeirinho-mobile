@@ -20,8 +20,8 @@ import HeaderRight from '../../components/Header/HeaderRight';
 const Dashboard: React.FC = () => {
   return (
     <Container>
-      <HeaderRight />
-      <HeaderLeft />
+      {/* <HeaderRight /> */}
+      {/* <HeaderLeft /> */}
       <Address />
       <Categories />
       <Coupon />

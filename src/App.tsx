@@ -2,8 +2,8 @@
 // import 'intl/locale-data/jsonp/pt-BR';
 import 'react-native-gesture-handler';
 
-import React, { useState, useEffect } from 'react';
-import { View, StatusBar, PermissionsAndroid } from 'react-native';
+import React from 'react';
+import { View, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 
 import AppProvider from './hooks';

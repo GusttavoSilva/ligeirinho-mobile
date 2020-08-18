@@ -7,6 +7,8 @@ export const Container = styled.View`
 export const AddressButton = styled.TouchableOpacity`
   display: flex;
   flex-direction: row;
+  align-items: center;
+  margin-right: 40px;
 `;
 
 export const Location = styled.Text`

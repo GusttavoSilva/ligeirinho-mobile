@@ -29,13 +29,13 @@ export const Item = styled.TouchableOpacity`
 `;
 
 export const ItemImage = styled.Image`
-  width: 100px;
-  height: 60px;
-  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
 `;
 
 export const ItemTitle = styled.Text`
   font-size: 16px;
-  margin-top: 10px;
+  margin-top: 2px;
   color: #999999;
 `;

@@ -10,27 +10,16 @@ import Geolocation from 'react-native-geolocation-service';
 import { red } from '../../utils/colors';
 
 import { usePermission } from '../../hooks/Permissions';
+import { DataAtual } from '../../utils/formatNumber';
 
 const Address: React.FC = () => {
-  const {
-    geolocationPermission,
-    coordinatesUser,
-    latitude,
-    longitude,
-  } = usePermission();
-
-  useEffect(() => {
-    geolocationPermission();
-    coordinatesUser();
-  }, []);
+  const { latitude, longitude } = usePermission();
+  console.log(DataAtual());
 
   return (
     <Container>
       <AddressButton>
-        <Location>
-          Jussara-Go, 23/06/2020{latitude}
-          {longitude}
-        </Location>
+        <Location>Jussara-Go, {DataAtual()}</Location>
         <Icon name="chevron-down" size={20} color={red} />
       </AddressButton>
     </Container>
